@@ -3,7 +3,7 @@ const onlySNSD = "https://onlysnsd1.blogspot.com/?m=1";
 
 window.portfolio = {
   heroImage: "assets/retro-crt.webp",
-  companionImage: "assets/chibi-cat.webp",
+  companion: true, // animated chibi cat in companion.js; set to false to hide it
   intro: "Deema Almanea · XR / VR developer and AI agent developer.",
   profile: {
     role: "XR / VR · AI agents",
