@@ -28,6 +28,11 @@ function artwork(entry) {
   return art;
 }
 
+function openInNewTab(anchor) {
+  anchor.target = "_blank";
+  anchor.rel = "noopener";
+}
+
 function appendLinks(container, links) {
   for (const link of links) {
     if (!link.url || !link.label) continue;
@@ -35,6 +40,7 @@ function appendLinks(container, links) {
     if (!["https:", "http:", "mailto:", "file:"].includes(destination.protocol)) continue;
     const anchor = element("a", "button secondary", link.label + " ↗");
     anchor.href = link.url;
+    if (destination.protocol.startsWith("http")) openInNewTab(anchor);
     container.append(anchor);
   }
 }
@@ -88,9 +94,9 @@ function showDetail(entry) {
     behind.append(...(entry.behindScenes || []).map(projectShot));
   }
   if (entry.report) {
-    const report = element("a", "button secondary", "Download full report (PDF) ↗");
+    const report = element("a", "button secondary", "View full report (PDF) ↗");
     report.href = entry.report;
-    report.download = "Smart-Parking-System.pdf";
+    openInNewTab(report);
     links.append(report);
   }
   const showCover = art && !entry.sections?.some((section) => section.shots?.length);
@@ -158,7 +164,7 @@ if (data.profile.portrait) {
 }
 if (data.profile.cv) {
   $("cv-link").href = data.profile.cv;
-  $("cv-link").download = "Deema-Almanea-CV.pdf";
+  openInNewTab($("cv-link"));
   $("cv-link").hidden = false;
 }
 

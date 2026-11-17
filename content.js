@@ -155,7 +155,7 @@ window.portfolio = {
   contact: {
     phone: "+966 53 332 0284",
     email: "Deemalmane3@gmail.com",
-    links: [],
+    links: [{ label: "GitHub", url: "https://github.com/DeemaTM" }],
     message: "For collaborations and conversations about XR, interface design, and creative technology."
   }
 };
