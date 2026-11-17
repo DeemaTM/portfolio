@@ -88,7 +88,7 @@ h2 span{color:var(--lime)}
 .portrait{position:relative;display:grid;place-items:center;aspect-ratio:1.25;margin:.75rem 0;background:var(--ink);color:var(--lime);font:900 clamp(2.5rem,7vw,6rem) var(--display);letter-spacing:-.12em}
 .portrait[aria-hidden="true"]{background-color:#191327;background-image:radial-gradient(ellipse at 50% 92%,#7955a5 0%,#342348 48%,#1a1126 90%)}
 .portrait.companion-still{background-size:auto 106%;background-position:center top;background-repeat:no-repeat}
-.companion{position:fixed;top:0;left:0;z-index:2;pointer-events:none;user-select:none;will-change:transform}
+.companion{position:fixed;top:0;left:0;transform-origin:50% 50%;z-index:2;pointer-events:none;user-select:none;will-change:transform}
 .companion .chibi{display:block;width:100%;height:auto;overflow:visible;transform-origin:50% 82%;filter:drop-shadow(1.4px 0 0 #f7f4ef) drop-shadow(-1.4px 0 0 #f7f4ef) drop-shadow(0 1.4px 0 #f7f4ef) drop-shadow(0 -1.4px 0 #f7f4ef) drop-shadow(0 8px 12px #10091670);clip-path:inset(0 0 var(--peek,0%) 0);animation:companion-idle 4s ease-in-out infinite}
 .companion[data-pose="travel"] .chibi{animation:companion-walk 1.2s ease-in-out infinite}
 .companion[data-pose="peek"] .chibi{transform-origin:50% 100%;animation:companion-peek 4.3s ease-in-out infinite}
@@ -176,3 +176,17 @@ dialog::backdrop{background:#080711cc;backdrop-filter:blur(5px)}
 .chibi.is-happy #c-eyeL,.chibi.is-happy #c-eyeR{display:none}
 .portrait.companion-still .chibi{position:absolute;bottom:0;left:50%;height:104%;width:auto;transform:translateX(-50%)}
 .portrait.companion-still .c-bubble{display:none}
+/* Contact: CV and GitHub side by side, same size, lime */
+#contact-actions{margin-top:1.5rem}
+#contact-actions .button{flex:1 1 0;min-width:11.5rem;max-width:18rem}
+.lang-toggle:lang(ar){font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;font-size:.9rem;letter-spacing:0;text-transform:none;padding-block:.5rem}
+/* Arabic version (?lang=ar) */
+html[lang="ar"]:not(.i18n-ready) body{opacity:0}
+html[lang="ar"]{--display:"Cairo","Arial Black",Tahoma,sans-serif;--body:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;--mono:"IBM Plex Sans Arabic",Tahoma,sans-serif}
+html[lang="ar"] body *{letter-spacing:0!important}
+html[lang="ar"] h1{font-weight:900;line-height:1.08;gap:0;font-size:min(15.5cqi,200px)}
+@media(max-width:760px){html[lang="ar"] h1{font-size:19cqi}}
+html[lang="ar"] h2{line-height:1.25}
+html[lang="ar"] .id-name,html[lang="ar"] .brand{font-family:"Arial Black",Arial,sans-serif}
+html[lang="ar"] .brand span{font-family:Consolas,monospace}
+html[lang="ar"] .lang-toggle{font-family:Consolas,"IBM Plex Mono",monospace;text-transform:uppercase}

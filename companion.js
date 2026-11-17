@@ -13,9 +13,10 @@
   const MARKUP = `
 <svg class="chibi" viewBox="0 0 220 270" xmlns="http://www.w3.org/2000/svg" focusable="false">
   <defs>
-    <linearGradient id="cHair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8dfe5"/><stop offset="1" stop-color="#dfadbb"/></linearGradient>
+    <linearGradient id="cHair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ff3e6"/><stop offset=".5" stop-color="#3fc9bd"/><stop offset="1" stop-color="#8a6cf0"/></linearGradient>
+    <linearGradient id="cHairLong" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fdccf"/><stop offset=".45" stop-color="#36b9ae"/><stop offset=".8" stop-color="#7b62e6"/><stop offset="1" stop-color="#9b7bff"/></linearGradient>
     <radialGradient id="cFace" cx=".5" cy=".42" r=".62"><stop offset="0" stop-color="#fff7f3"/><stop offset="1" stop-color="#f9e0d8"/></radialGradient>
-    <linearGradient id="cIris" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#24112a"/><stop offset=".55" stop-color="#5d3b8f"/><stop offset="1" stop-color="#c6abff"/></linearGradient>
+    <linearGradient id="cIris" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f1d26"/><stop offset=".5" stop-color="#249c93"/><stop offset="1" stop-color="#ad90ff"/></linearGradient>
     <linearGradient id="cCloth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26232d"/><stop offset="1" stop-color="#141218"/></linearGradient>
     <clipPath id="cClipL"><ellipse cx="105" cy="125" rx="10.5" ry="13"/></clipPath>
     <clipPath id="cClipR"><ellipse cx="145" cy="125" rx="10.5" ry="13"/></clipPath>
@@ -23,8 +24,10 @@
   <g id="c-char" stroke-linejoin="round" stroke-linecap="round">
     <g id="c-tail">
       <path d="M146 222 C172 226 196 206 192 178 C189 160 199 146 210 150" fill="none" stroke="${OUT}" stroke-width="13"/>
-      <path d="M146 222 C172 226 196 206 192 178 C189 160 199 146 210 150" fill="none" stroke="#e9bfca" stroke-width="8.5"/>
-      <path d="M195 162 C198 152 204 148 210 150" fill="none" stroke="#c88fa1" stroke-width="8.5"/>
+      <path d="M146 222 C172 226 196 206 192 178 C189 160 199 146 210 150" fill="none" stroke="#3fc9bd" stroke-width="8.5"/>
+      <path d="M195 162 C198 152 204 148 210 150" fill="none" stroke="#8a6cf0" stroke-width="8.5"/>
+      <path d="M186.5 170 L197.5 166.5" stroke="#dcff53" stroke-width="3"/>
+      <path d="M150 220 C170 222 188 208 188 186" fill="none" stroke="#a7f7ed" stroke-width="1.6" opacity=".7"/>
       <path d="M164 216 L156 206 L172 210 Z M164 216 L176 222 L168 228 Z" fill="#b99af8" stroke="${OUT}" stroke-width="1.6"/>
       <circle cx="166" cy="216" r="3.2" fill="#9b78ec" stroke="${OUT}" stroke-width="1.4"/>
     </g>
@@ -32,6 +35,9 @@
       <rect x="119" y="154" width="12" height="26" rx="4" fill="#f2d2c9"/>
       <path d="M108 176 L142 176 C150 190 156 214 162 234 Q125 244 88 234 C94 214 100 190 108 176 Z" fill="url(#cCloth)" stroke="${OUT}" stroke-width="2.2"/>
       <path d="M91 229 Q125 239 159 229" fill="none" stroke="#b99af8" stroke-width="3"/>
+      <path d="M93 233.5 Q125 243 157 233.5" fill="none" stroke="#dcff53" stroke-width="1.2" opacity=".9"/>
+      <path d="M131 197 L131 206 L135 206 M115 216 L115 223 L108 223 M144 216 L148 221 L148 228" fill="none" stroke="#3fc9bd" stroke-width="1.1"/>
+      <circle cx="131" cy="197" r="1.4" fill="#3fc9bd"/><circle cx="115" cy="216" r="1.4" fill="#3fc9bd"/><circle cx="108" cy="223" r="1.4" fill="#dcff53"/><circle cx="148" cy="228" r="1.4" fill="#dcff53"/>
       <path d="M110 176 L125 195 L140 176 Z" fill="#f7f4ef" stroke="${OUT}" stroke-width="1.6"/>
       <path d="M121 189 L129 189 L127.5 203 L125 206 L122.5 203 Z" fill="#b99af8" stroke="${OUT}" stroke-width="1.3"/>
       <rect x="108" y="207" width="5.5" height="5.5" rx="1.2" fill="#8f5fe8"/><rect x="115" y="207" width="5.5" height="5.5" rx="1.2" fill="#b99af8"/>
@@ -45,27 +51,29 @@
     </g>
     <g id="c-head">
       <g id="c-twinL">
-        <path d="M74 80 C50 92 40 125 48 158 C52 175 44 188 36 196 C58 194 72 178 74 160 C77 135 80 110 86 92 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-        <path d="M64 104 C56 126 58 150 52 176" fill="none" stroke="#cf9eac" stroke-width="1.8"/>
+        <path d="M74 80 C50 92 40 125 48 158 C52 175 44 188 36 196 C58 194 72 178 74 160 C77 135 80 110 86 92 Z" fill="url(#cHairLong)" stroke="${OUT}" stroke-width="2.2"/>
+        <path d="M64 104 C56 126 58 150 52 176" fill="none" stroke="#2a9f97" stroke-width="1.8"/>
       </g>
       <g id="c-twinR">
-        <path d="M176 80 C200 92 210 125 202 158 C198 175 206 188 214 196 C192 194 178 178 176 160 C173 135 170 110 164 92 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-        <path d="M186 104 C194 126 192 150 198 176" fill="none" stroke="#cf9eac" stroke-width="1.8"/>
+        <path d="M176 80 C200 92 210 125 202 158 C198 175 206 188 214 196 C192 194 178 178 176 160 C173 135 170 110 164 92 Z" fill="url(#cHairLong)" stroke="${OUT}" stroke-width="2.2"/>
+        <path d="M186 104 C194 126 192 150 198 176" fill="none" stroke="#2a9f97" stroke-width="1.8"/>
       </g>
       <g id="c-earL">
         <path d="M80 76 L84 26 Q86 21 91 25 L116 52 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-        <path d="M87 64 L89 37 L106 54 Z" fill="#ffb3c6"/>
+        <path d="M87 64 L89 37 L106 54 Z" fill="#c9b2ff"/>
       </g>
       <g id="c-earR">
         <path d="M170 76 L166 26 Q164 21 159 25 L134 52 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-        <path d="M163 64 L161 37 L144 54 Z" fill="#ffb3c6"/>
+        <path d="M163 64 L161 37 L144 54 Z" fill="#c9b2ff"/>
       </g>
       <path d="M66 112 C62 66 96 46 125 46 C154 46 188 66 184 112 C186 134 182 150 176 156 Q125 140 74 156 C68 150 64 134 66 112 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-      <ellipse cx="72" cy="86" rx="6.5" ry="5.5" fill="#b99af8" stroke="${OUT}" stroke-width="1.6"/>
-      <ellipse cx="178" cy="86" rx="6.5" ry="5.5" fill="#b99af8" stroke="${OUT}" stroke-width="1.6"/>
+      <rect x="64" y="79" width="16" height="13" rx="4.5" fill="#19171e" stroke="${OUT}" stroke-width="1.6"/>
+      <path d="M67.5 85.5 L76.5 85.5" stroke="#dcff53" stroke-width="2.2"/>
+      <rect x="170" y="79" width="16" height="13" rx="4.5" fill="#19171e" stroke="${OUT}" stroke-width="1.6"/>
+      <path d="M173.5 85.5 L182.5 85.5" stroke="#dcff53" stroke-width="2.2"/>
       <ellipse cx="125" cy="118" rx="49" ry="44" fill="url(#cFace)" stroke="${OUT}" stroke-width="2.2"/>
       <path d="M74 112 C72 80 96 62 125 62 C154 62 178 80 176 112 Q171 99 166 94 Q163 104 158 110 Q154 96 148 90 Q145 100 140 106 Q136 94 131 88 Q129 95 125 100 Q121 95 119 88 Q114 94 110 106 Q105 100 102 90 Q96 96 92 110 Q87 104 84 94 Q79 99 74 112 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2.2"/>
-      <path d="M100 73 Q125 64 150 73" fill="none" stroke="#fff4f6" stroke-width="3" opacity=".85"/>
+      <path d="M100 73 Q125 64 150 73" fill="none" stroke="#e6fffb" stroke-width="3" opacity=".85"/>
       <path d="M78 100 C70 124 72 150 80 172 C86 160 88 140 90 118 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2"/>
       <path d="M172 100 C180 124 178 150 170 172 C164 160 162 140 160 118 Z" fill="url(#cHair)" stroke="${OUT}" stroke-width="2"/>
       <ellipse cx="96" cy="142" rx="8" ry="4.5" fill="#ff9fb6" opacity=".55"/>
@@ -117,7 +125,7 @@
     <path d="M46 37 L62 51 L36 40 Z" fill="#17151b" stroke="#b99af8" stroke-width="1.6" stroke-linejoin="round"/>
     <rect x="4" y="8" width="62" height="32" rx="16" fill="#17151b" stroke="#b99af8" stroke-width="1.6"/>
     <path d="M37 40 L45.5 40" stroke="#17151b" stroke-width="2.6"/>
-    <text id="c-say" x="35" y="29.5" text-anchor="middle" font-family="Consolas, 'IBM Plex Mono', monospace" font-weight="700" font-size="15" fill="#f1eee8">:3</text>
+    <text id="c-say" x="35" y="29.5" text-anchor="middle" font-family="Consolas, 'IBM Plex Sans Arabic', Tahoma, monospace" font-weight="700" font-size="15" fill="#f1eee8">:3</text>
   </g>
   <ellipse class="hit" cx="125" cy="150" rx="74" ry="106" fill="transparent"/>
 </svg>`;
@@ -211,19 +219,20 @@
     const r = Math.random();
     if (r < .4) fixHair();
     else if (r < .65) lookAround();
-    else if (r < .85) { flick("earL"); setTimeout(() => flick("earR"), 160); say(":3"); }
-    else { flick("earR"); say("nya~"); }
+    else if (r < .85) { flick("earL"); setTimeout(() => flick("earR"), 160); say(chat.idle[1]); }
+    else { flick("earR"); say(chat.idle[0]); }
   }
 
   // ---------- interaction ----------
+  const chat = (window.i18n && window.i18n.t.chatter) || { hover: ":3", idle: ["nya~", ":3"], tap: ["nya~", "hi!", ":3", "♡", "✦"] };
   let pointer = null;
   addEventListener("pointermove", (e) => { pointer = { x: e.clientX, y: e.clientY }; }, { passive: true });
   document.addEventListener("pointerleave", () => { pointer = null; });
   P.hit.addEventListener("pointerenter", () => {
     flick("earL"); setTimeout(() => flick("earR"), 120);
-    if (s.bubble < .5) say(":3", 1300);
+    if (s.bubble < .5) say(chat.hover, 1300);
   });
-  const phrases = ["nya~", "hi!", ":3", "♡", "✦"];
+  const phrases = chat.tap;
   let lastPhrase = "";
   P.hit.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -287,6 +296,7 @@
 
   // ---------- placement (scrolls down the page and docks into the About card) ----------
   let placeFrame = 0;
+  const CARD_ANGLE = -8; // matches .id-card rotate(-8deg) in styles.css
   function placeCompanion() {
     placeFrame = 0;
     if (reducedMotion.matches) return;
@@ -296,21 +306,32 @@
     const progress = Math.min(1, Math.max(0, (viewHeight * .91 - target.top) / (viewHeight * .34)));
     const dock = progress * progress * (3 - 2 * progress);
     const travelWidth = Math.max(78, Math.min(160, viewWidth * .13));
-    const dockWidth = Math.min(target.width * .9, target.height * .98 / RATIO);
+    // Docked: as tall as the frame, standing at its bottom centre, tilted with the card.
+    // The portrait sits inside the rotated card, so work in its own (unrotated) size
+    // and rotate the offset around its centre.
+    const frameW = portrait.offsetWidth, frameH = portrait.offsetHeight;
+    const dockH = Math.min(frameH * 1.02, frameW * .95 * RATIO);
+    const dockWidth = dockH / RATIO;
+    const localX = -dockWidth * (15 / 220); // character centre is x=125 of the 220-wide drawing
+    const localY = frameH / 2 - dockH / 2 + dockH * .035; // feet just above the frame's bottom edge
+    const a = CARD_ANGLE * Math.PI / 180;
+    const dockCX = target.left + target.width / 2 + localX * Math.cos(a) - localY * Math.sin(a);
+    const dockCY = target.top + target.height / 2 + localX * Math.sin(a) + localY * Math.cos(a);
+    const dockX = dockCX - dockWidth / 2;
+    const dockY = dockCY - dockH / 2;
     const width = travelWidth + (dockWidth - travelWidth) * dock;
-    const cornerX = viewWidth - travelWidth - Math.max(8, viewWidth * .02);
+    const edge = Math.max(8, viewWidth * .02);
+    const cornerX = document.documentElement.dir === "rtl" ? edge : viewWidth - travelWidth - edge;
     const approachScroll = Math.max(1, window.scrollY + target.top - viewHeight * .91);
     const descent = Math.min(1, window.scrollY / approachScroll);
     const startY = Math.min(84, viewHeight * .14);
     const lastY = Math.max(startY, viewHeight - travelWidth * RATIO - 20);
     const cornerY = startY + (lastY - startY) * descent;
-    const dockX = target.left + (target.width - dockWidth) * .5;
-    const dockY = target.bottom - dockWidth * RATIO * .93;
     const x = cornerX + (dockX - cornerX) * dock;
     const y = cornerY + (dockY - cornerY) * dock;
     companion.style.width = width + "px";
-    companion.style.transform = "translate3d(" + x + "px," + y + "px,0)";
-    companion.style.setProperty("--peek", (9 * dock) + "%");
+    companion.style.transform = "translate3d(" + x + "px," + y + "px,0) rotate(" + (CARD_ANGLE * dock) + "deg)";
+    companion.style.setProperty("--peek", "0%");
     companion.dataset.pose = dock > .93 ? "peek" : window.scrollY < 45 ? "idle" : "travel";
   }
   const schedule = () => { if (!placeFrame) placeFrame = requestAnimationFrame(placeCompanion); };

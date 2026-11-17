@@ -1,6 +1,7 @@
 "use strict";
 
 const data = window.portfolio;
+const ui = (window.i18n && window.i18n.t) || {};
 const $ = (id) => document.getElementById(id);
 const dialog = $("detail");
 
@@ -33,12 +34,12 @@ function openInNewTab(anchor) {
   anchor.rel = "noopener";
 }
 
-function appendLinks(container, links) {
+function appendLinks(container, links, variant = "button secondary") {
   for (const link of links) {
     if (!link.url || !link.label) continue;
     const destination = new URL(link.url, location.href);
     if (!["https:", "http:", "mailto:", "file:"].includes(destination.protocol)) continue;
-    const anchor = element("a", "button secondary", link.label + " ↗");
+    const anchor = element("a", variant, link.label + " " + ui.arrow);
     anchor.href = link.url;
     if (destination.protocol.startsWith("http")) openInNewTab(anchor);
     container.append(anchor);
@@ -59,7 +60,7 @@ function showDetail(entry) {
     const section = element("section", "case-section");
     section.append(element("h3", "", item.title), element("p", "", item.text));
     if (item.arabicExample) {
-      const example = element("p", "subtitle-example", "Sample Arabic cue");
+      const example = element("p", "subtitle-example", ui.sampleCue);
       const subtitle = element("q", "", item.arabicExample);
       subtitle.lang = "ar";
       subtitle.dir = "rtl";
@@ -84,17 +85,17 @@ function showDetail(entry) {
     player.preload = "none";
     player.poster = entry.image || "";
     player.src = entry.video;
-    player.setAttribute("aria-label", entry.name + " gameplay");
+    player.setAttribute("aria-label", entry.name + " · " + ui.gameplay);
     gameplay.append(player, element("figcaption", "", entry.videoCaption));
   }
   const behind = element("section", "case-section behind-scenes");
   if (entry.behindText || entry.behindScenes?.length) {
-    behind.append(element("h3", "", "Behind the scenes"));
+    behind.append(element("h3", "", ui.behind));
     if (entry.behindText) behind.append(element("p", "", entry.behindText));
     behind.append(...(entry.behindScenes || []).map(projectShot));
   }
   if (entry.report) {
-    const report = element("a", "button secondary", "View full report (PDF) ↗");
+    const report = element("a", "button secondary", ui.report + " " + ui.arrow);
     report.href = entry.report;
     openInNewTab(report);
     links.append(report);
@@ -120,7 +121,7 @@ function card(entry) {
   button.type = "button";
   const caption = element("span", "card-caption");
   const title = element("span", "card-title", entry.name);
-  const arrow = element("span", "card-arrow", "↗");
+  const arrow = element("span", "card-arrow", ui.arrow);
   arrow.setAttribute("aria-hidden", "true");
   caption.append(element("span", "eyebrow", entry.category), title, element("span", "card-summary", entry.summary), arrow);
   const art = artwork(entry);
@@ -132,23 +133,23 @@ function card(entry) {
 }
 
 function renderArchive(category) {
-  const entries = data.archive.filter((entry) => category === "All" || entry.category === category);
+  const entries = data.archive.filter((entry) => category === null || entry.category === category);
   $("archive-grid").replaceChildren(...entries.map(card));
 }
 
 const categories = [...new Set(data.archive.map((entry) => entry.category))];
 $("filters").hidden = categories.length < 2;
-for (const category of ["All", ...categories]) {
-  const button = element("button", "filter", category);
+for (const category of [null, ...categories]) {
+  const button = element("button", "filter", category ?? ui.all);
   button.type = "button";
-  button.setAttribute("aria-pressed", category === "All");
+  button.setAttribute("aria-pressed", category === null);
   button.addEventListener("click", () => {
     for (const filter of $("filters").children) filter.setAttribute("aria-pressed", filter === button);
     renderArchive(category);
   });
   $("filters").append(button);
 }
-renderArchive("All");
+renderArchive(null);
 $("project-grid").append(...data.projects.map(card));
 
 $("computer").querySelector("img").src = data.heroImage;
@@ -158,14 +159,9 @@ $("id-role").textContent = data.profile.role;
 if (data.profile.portrait) {
   const portrait = element("img");
   portrait.src = data.profile.portrait;
-  portrait.alt = "Portrait of Deema Almanea";
+  portrait.alt = ui.portraitAlt;
   $("portrait").removeAttribute("aria-hidden");
   $("portrait").replaceChildren(portrait);
-}
-if (data.profile.cv) {
-  $("cv-link").href = data.profile.cv;
-  openInNewTab($("cv-link"));
-  $("cv-link").hidden = false;
 }
 
 $("lab-intro").textContent = data.lab.intro;
@@ -182,18 +178,24 @@ $("contact-copy").textContent = data.contact.message;
 if (data.contact.phone) {
   const phone = element("a", "contact-method");
   phone.href = "tel:" + data.contact.phone.replace(/[^+\d]/g, "");
-  phone.append(element("span", "", "Phone"), element("strong", "", data.contact.phone), element("span", "contact-arrow", "↗"));
+  phone.append(element("span", "", ui.phone), Object.assign(element("strong", "", data.contact.phone), { dir: "ltr" }), element("span", "contact-arrow", ui.arrow));
   phone.lastChild.setAttribute("aria-hidden", "true");
   $("contact-methods").append(phone);
 }
 if (data.contact.email) {
   const email = element("a", "contact-method");
   email.href = "mailto:" + data.contact.email;
-  email.append(element("span", "", "Email"), element("strong", "", data.contact.email), element("span", "contact-arrow", "↗"));
+  email.append(element("span", "", ui.email), Object.assign(element("strong", "", data.contact.email), { dir: "ltr" }), element("span", "contact-arrow", ui.arrow));
   email.lastChild.setAttribute("aria-hidden", "true");
   $("contact-methods").append(email);
 }
-appendLinks($("contact-actions"), data.contact.links);
+if (data.profile.cv) {
+  const cv = element("a", "button", ui.cv + " " + ui.arrow);
+  cv.href = data.profile.cv;
+  openInNewTab(cv);
+  $("contact-actions").append(cv);
+}
+appendLinks($("contact-actions"), data.contact.links, "button");
 $("year").textContent = new Date().getFullYear();
 
 dialog.addEventListener("click", (event) => {
