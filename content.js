@@ -23,14 +23,17 @@ window.portfolio = {
         { title: "The call comes in", text: "The crew begins in the fire-station lobby, where the dispatch screen gives the briefing and each player has a workstation. Once the first player accepts the call, the alarm sounds and an external light at the wheel turns on. A loading scene takes the crew from the station into the mission.", shots: [
           { image: "assets/firefighters-multiplayer-station.webp", alt: "Dispatch briefing and Station Blue monitor from the player's point of view", caption: "Inside the multiplayer lobby, looking toward Station Blue." }
         ] },
-        { title: "On the road", text: "The second player drives the fire truck through the city with a real steering wheel. The first player checks the incident location on an in-game tablet and guides the driver to the address. The station, truck, and house were refined as connected parts of the same world." },
+        { title: "On the road", text: "The second player drives the fire truck through the city with a real steering wheel. The first player checks the incident location on an in-game tablet and guides the driver to the address. The station, truck, and house were refined as connected parts of the same world.", shots: [
+          { image: "assets/firefighters-truck-night.webp", alt: "Yellow fire truck with blue and red light markers on a night street in the Unity Scene view", caption: "The fire truck on the night route, with its emergency lights placed in the Unity Scene view." },
+          { image: "assets/firefighters-night-street.webp", alt: "Street-level view of a lit city road at night with parked cars and office buildings", caption: "Street level on the driving route through the night city." }
+        ] },
         { title: "At the scene", text: "When the truck arrives, the driver works the hose reel while the other player takes the hose to the fire. Solo play lets a bot take the other part of the mission, with the option to switch between driver and firefighter." }
       ],
       behindScenes: [
         { image: "assets/fire-alarm-board.webp", alt: "Red alarm beacon wired to a soldered board beside the steering wheel", caption: "The alarm prototype on the bench. We soldered the Arduino circuit and wrote code to switch the red beacon on when the in-game alarm fires." },
         { image: "assets/fire-hardware-bench.webp", alt: "Logitech steering wheel, circuit board, and Meta Quest equipment on a workbench", caption: "Testing the physical setup with a steering wheel, Quest hardware, and the alarm circuit." },
         { image: "assets/firefighters-multiplayer-lobby.webp", alt: "Unity Scene view of the dispatch and player workstation screens", caption: "In Unity, arranging the dispatch and workstation screens inside the fire-station lobby." },
-        { image: "assets/firefighters-multiplayer-city.webp", alt: "Nighttime city streets in the Unity editor", caption: "The city route in Unity while assembling the driving environment." }
+        { image: "assets/firefighters-night-city.webp", alt: "Aerial view of the night city with streets, street lights, and tall buildings in Unity", caption: "The night city from above in Unity while assembling the driving environment." }
       ],
       links: []
     },
