@@ -16,7 +16,7 @@ window.portfolio = {
       name: "Firefighters VR", category: "Multiplayer VR · IoT",
       video: "assets/firefighters-trailer.mp4", videoPoster: "assets/firefighters-trailer-poster.jpg", videoSize: [848, 464],
       videoLabel: "Firefighters VR trailer", videoCaption: "Trailer · the city, choosing a partner, the drive, and the fire scene.",
-      videoCredit: "Trailer created and edited by Deema Almanea.",
+      videoCredit: "Trailer created and edited by me :>",
       image: "assets/firefighters-multiplayer-station.webp",
       alt: "Firefighters VR dispatch workstation from the player's point of view",
       summary: "A two-player emergency-response game with a physical steering wheel and an Arduino alarm light.",
@@ -30,7 +30,12 @@ window.portfolio = {
           { image: "assets/firefighters-truck-night.webp", alt: "Yellow fire truck with blue and red light markers on a night street in the Unity Scene view", caption: "The fire truck on the night route, with its emergency lights placed in the Unity Scene view." },
           { image: "assets/firefighters-night-street.webp", alt: "Street-level view of a lit city road at night with parked cars and office buildings", caption: "Street level on the driving route through the night city." }
         ] },
-        { title: "At the scene", text: "When the truck arrives, the driver works the hose reel while the other player takes the hose to the fire. Solo play lets a bot take the other part of the mission, with the option to switch between driver and firefighter." }
+        { title: "At the scene", text: "When the truck arrives, the driver works the hose reel while the other player takes the hose to the fire. Solo play lets a bot take the other part of the mission, with the option to switch between driver and firefighter." },
+        { title: "From simulation to player insights", text: "The game saves player records and mission completion times to an online database. A web dashboard we built presents these results, ranks every crew by total time, and highlights the fastest runs, extending the experience beyond the headset. The results refresh automatically, and the dashboard includes a live view designed to follow a mission while a crew is playing.", shots: [
+          { image: "assets/firefighters-dashboard.webp", alt: "Firefighters VR operations dashboard showing the fastest-crew record of 03:16 with no penalties, mission stats, and the ranked list of all crews", caption: "The live leaderboard's overview, with the record for the fastest crew. Player names are blurred in this screenshot." }
+        ], links: [
+          { label: "View Live Leaderboard", url: "https://fire-fighters-vr.web.app/" }
+        ] }
       ],
       behindScenes: [
         { image: "assets/fire-alarm-board.webp", alt: "Red alarm beacon wired to a soldered board beside the steering wheel", caption: "The alarm prototype on the bench. We soldered the Arduino circuit and wrote code to switch the red beacon on when the in-game alarm fires." },
@@ -38,7 +43,7 @@ window.portfolio = {
         { image: "assets/firefighters-multiplayer-lobby.webp", alt: "Unity Scene view of the dispatch and player workstation screens", caption: "In Unity, arranging the dispatch and workstation screens inside the fire-station lobby." },
         { image: "assets/firefighters-night-city.webp", alt: "Aerial view of the night city with streets, street lights, and tall buildings in Unity", caption: "The night city from above in Unity while assembling the driving environment." }
       ],
-      links: []
+      links: [{ label: "Download APK · GitHub Release", url: "https://github.com/HarribelSA/Fire-Fighters-Multiyplayer-VR/releases/tag/v1.0.1" }]
     },
     {
       name: "Musical VR", category: "Headset VR · Rhythm game",
