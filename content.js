@@ -15,7 +15,7 @@ window.portfolio = {
     {
       name: "Firefighters VR", category: "Multiplayer VR · IoT",
       video: "assets/firefighters-trailer.mp4", videoPoster: "assets/firefighters-trailer-poster.jpg", videoSize: [848, 464],
-      videoLabel: "Firefighters VR trailer", videoCaption: "Trailer · the city, choosing a partner, the drive, and the fire scene.",
+      videoLabel: "Firefighters VR trailer", videoCaption: "",
       videoCredit: "Trailer created and edited by me :>",
       image: "assets/firefighters-multiplayer-station.webp",
       alt: "Firefighters VR dispatch workstation from the player's point of view",

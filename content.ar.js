@@ -17,7 +17,7 @@
       {
         name: "رجال الإطفاء VR", category: "واقع افتراضي جماعي · إنترنت الأشياء",
         video: "assets/firefighters-trailer.mp4", videoPoster: "assets/firefighters-trailer-poster.jpg", videoSize: [848, 464],
-        videoLabel: "التريلر الرسمي للعبة رجال الإطفاء VR", videoCaption: "التريلر · المدينة، واختيار الشريك، والقيادة، وموقع الحريق.",
+        videoLabel: "التريلر الرسمي للعبة رجال الإطفاء VR", videoCaption: "",
         videoCredit: "التريلر من إعدادي ومونتاجي :>",
         image: "assets/firefighters-multiplayer-station.webp",
         alt: "محطة الإرسال في لعبة رجال الإطفاء VR من منظور اللاعب",
