@@ -14,6 +14,9 @@ window.portfolio = {
   projects: [
     {
       name: "Firefighters VR", category: "Multiplayer VR · IoT",
+      video: "assets/firefighters-trailer.mp4", videoPoster: "assets/firefighters-trailer-poster.jpg", videoSize: [848, 464],
+      videoLabel: "Firefighters VR trailer", videoCaption: "Trailer · the city, choosing a partner, the drive, and the fire scene.",
+      videoCredit: "Trailer created and edited by Deema Almanea.",
       image: "assets/firefighters-multiplayer-station.webp",
       alt: "Firefighters VR dispatch workstation from the player's point of view",
       summary: "A two-player emergency-response game with a physical steering wheel and an Arduino alarm light.",

@@ -190,3 +190,4 @@ html[lang="ar"] h2{line-height:1.25}
 html[lang="ar"] .id-name,html[lang="ar"] .brand{font-family:"Arial Black",Arial,sans-serif}
 html[lang="ar"] .brand span{font-family:Consolas,monospace}
 html[lang="ar"] .lang-toggle{font-family:Consolas,"IBM Plex Mono",monospace;text-transform:uppercase}
+.gameplay-video .video-credit{display:block;margin-top:.3rem;font-weight:700}

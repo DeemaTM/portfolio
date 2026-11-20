@@ -83,10 +83,13 @@ function showDetail(entry) {
     player.controls = true;
     player.playsInline = true;
     player.preload = "none";
-    player.poster = entry.image || "";
+    player.poster = entry.videoPoster || entry.image || "";
+    if (entry.videoSize) player.style.aspectRatio = entry.videoSize.join(" / ");
     player.src = entry.video;
-    player.setAttribute("aria-label", entry.name + " · " + ui.gameplay);
-    gameplay.append(player, element("figcaption", "", entry.videoCaption));
+    player.setAttribute("aria-label", entry.videoLabel || entry.name + " · " + ui.gameplay);
+    const caption = element("figcaption", "", entry.videoCaption);
+    if (entry.videoCredit) caption.append(element("strong", "video-credit", entry.videoCredit));
+    gameplay.append(player, caption);
   }
   const behind = element("section", "case-section behind-scenes");
   if (entry.behindText || entry.behindScenes?.length) {

@@ -16,6 +16,9 @@
     projects: [
       {
         name: "رجال الإطفاء VR", category: "واقع افتراضي جماعي · إنترنت الأشياء",
+        video: "assets/firefighters-trailer.mp4", videoPoster: "assets/firefighters-trailer-poster.jpg", videoSize: [848, 464],
+        videoLabel: "التريلر الرسمي للعبة رجال الإطفاء VR", videoCaption: "التريلر · المدينة، واختيار الشريك، والقيادة، وموقع الحريق.",
+        videoCredit: "التريلر من إعداد ومونتاج ديما المانع.",
         image: "assets/firefighters-multiplayer-station.webp",
         alt: "محطة الإرسال في لعبة رجال الإطفاء VR من منظور اللاعب",
         summary: "لعبة طوارئ للاعبَين مع مقود سيارة حقيقي وضوء إنذار يعمل بـ Arduino.",
