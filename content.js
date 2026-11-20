@@ -128,10 +128,21 @@ window.portfolio = {
       links: []
     },
     {
-      name: "RO-MEDIC", category: "Healthcare · Concept study",
-      summary: "An early paper concept for an AI-guided first-aid kit.",
-      description: "RO-MEDIC explored how a smart first-aid kit might guide users through an emergency. The work reached the concept stage.",
-      skills: ["Concept development", "Healthcare UX"],
+      name: "RO-MEDIC — Smart First-Aid Kit Concept", category: "High School Graduation Project · Research & Concept Design",
+      image: "assets/ro-medic-brochure.jpg", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features",
+      summary: "A team graduation project that researched and designed a smart first-aid kit concept to guide untrained people through an emergency.",
+      description: "RO-MEDIC was our team's high school graduation project. We researched the problem and designed a concept for a smart first-aid kit that would guide people without medical training through an emergency, step by step. It was never built as a working product.",
+      skills: ["Research", "Concept design", "Teamwork"],
+      sections: [
+        { title: "The problem", text: "In an emergency, a fast and correct decision can save a life. Yet most people hesitate to give first aid: they lack training, panic, or cannot find the right tool in time." },
+        { title: "The proposed kit", text: "RO-MEDIC was designed as a first-aid kit that acts as a step-by-step assistant for homes, schools, trips, and public places. The proposed features would work as one sequence: (1) a lid sensor switches the system on, lights the inside with LEDs, and starts voice guidance; (2) sensors read heart rate, temperature, and blood oxygen (SpO₂); (3) the kit's software uses those readings to suggest a likely condition, such as a fever or loss of consciousness; (4) the needed tool lights up while a small screen and speaker give visual and spoken instructions; (5) an emergency button sends the user's GPS location and readings to a saved contact through a phone app. The kit would also warn when supplies run low or medicines expire, and run on a rechargeable battery with optional solar charging.", shots: [
+          { image: "assets/ro-medic-brochure.jpg", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features", caption: "The team's project brochure. The product image is a concept visualization, not a built device." }
+        ] },
+        { title: "Research and design process", text: "The team studied the problem, specified the parts the kit would need (an Arduino or Raspberry Pi controller, vital-sign sensors, a display, a speaker, Bluetooth/Wi-Fi, and GPS), and mapped likely challenges with possible solutions: calibrating sensors for accuracy, a larger battery and solar charging for power use, and software engineers to help test the app. A short survey of 50 high school students found that 82% supported the idea of a smart first-aid assistant and 80% wanted one in their schools." },
+        { title: "Outcome", text: "RO-MEDIC stayed at the research and concept-design stage. No prototype was built or tested; the features described here were proposed only." }
+      ],
+      gallery: [{ image: "assets/ro-medic-poster.jpg", alt: "RO-MEDIC promotional poster showing a stylized teal and red first-aid device", caption: "Promotional poster · Concept visualization." }],
+      report: "assets/ro-medic-report.pdf", reportLabel: "Read the Project Report · PDF",
       links: []
     }
   ],

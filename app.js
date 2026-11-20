@@ -98,7 +98,7 @@ function showDetail(entry) {
     behind.append(...(entry.behindScenes || []).map(projectShot));
   }
   if (entry.report) {
-    const report = element("a", "button secondary", ui.report + " " + ui.arrow);
+    const report = element("a", "button secondary", (entry.reportLabel || ui.report) + " " + ui.arrow);
     report.href = entry.report;
     openInNewTab(report);
     links.append(report);
