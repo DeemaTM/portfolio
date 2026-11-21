@@ -47,7 +47,7 @@ window.portfolio = {
     },
     {
       name: "Musical VR", category: "Headset VR · Rhythm game",
-      video: "assets/musical-gameplay.mp4", videoCaption: "Headset gameplay · lobby, song selection, rhythm stage, and results.",
+      video: "assets/musical-vr-gameplay.mp4", videoPoster: "assets/musical-vr-poster.jpg", videoSize: [1280, 704], videoCaption: "Headset gameplay · lobby, song selection, rhythm stage, results, and the piano and drum lessons.",
       image: "assets/musical-rhythm.webp", alt: "Turquoise and purple crystals on a neon rhythm runway",
       summary: "A Japanese-inspired VR rhythm game with a sakura village lobby and playable drum and piano lessons.",
       description: "Musical VR brings a rhythm arcade and two instrument classrooms into a Japanese-inspired village. From the headset lobby, three torii portals lead to rhythm, drums, and piano.",
@@ -180,7 +180,7 @@ window.portfolio = {
   contact: {
     phone: "+966 53 332 0284",
     email: "Deemalmane3@gmail.com",
-    links: [{ label: "GitHub", url: "https://github.com/DeemaTM" }],
+    links: [{ label: "GitHub", url: "https://github.com/DeemaTM" }, { label: "LinkedIn", url: "https://www.linkedin.com/in/deema-almanea/" }],
     message: "For collaborations and conversations about XR, interface design, and creative technology."
   }
 };

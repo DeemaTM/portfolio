@@ -49,7 +49,7 @@
       },
       {
         name: "ميوزيكال VR", category: "نظارة واقع افتراضي · لعبة إيقاع",
-        video: "assets/musical-gameplay.mp4", videoCaption: "لقطات لعب من داخل النظارة · الردهة، واختيار الأغنية، ومرحلة الإيقاع، والنتائج.",
+        video: "assets/musical-vr-gameplay.mp4", videoPoster: "assets/musical-vr-poster.jpg", videoSize: [1280, 704], videoCaption: "لقطات لعب من داخل النظارة · الردهة، واختيار الأغنية، ومرحلة الإيقاع، والنتائج، ودرسا البيانو والطبول.",
         image: "assets/musical-rhythm.webp", alt: "بلورات فيروزية وبنفسجية على مدرج إيقاع نيوني",
         summary: "لعبة إيقاع بالواقع الافتراضي مستوحاة من اليابان، فيها قرية ساكورا ودروس طبول وبيانو قابلة للعب.",
         description: "تجمع ميوزيكال VR صالة إيقاع وفصلين لتعلّم الآلات داخل قرية مستوحاة من اليابان. ومن ردهة النظارة تقود ثلاث بوابات توري إلى الإيقاع والطبول والبيانو.",
@@ -182,7 +182,7 @@
     contact: {
       phone: "+966 53 332 0284",
       email: "Deemalmane3@gmail.com",
-      links: [{ label: "GitHub", url: "https://github.com/DeemaTM" }],
+      links: [{ label: "GitHub", url: "https://github.com/DeemaTM" }, { label: "LinkedIn", url: "https://www.linkedin.com/in/deema-almanea/" }],
       message: "للتعاون والحديث عن الواقع الممتد وتصميم الواجهات والتقنية الإبداعية."
     }
   };
