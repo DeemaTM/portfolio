@@ -129,21 +129,24 @@ window.portfolio = {
     },
     {
       name: "RO-MEDIC — Smart First-Aid Kit Concept", category: "High School Graduation Project · Research & Concept Design",
-      image: "assets/ro-medic-brochure.jpg", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features",
-      summary: "A team graduation project that researched and designed a smart first-aid kit concept to guide untrained people through an emergency.",
-      description: "RO-MEDIC was our team's high school graduation project. We researched the problem and designed a concept for a smart first-aid kit that would guide people without medical training through an emergency, step by step. It was never built as a working product.",
+      image: "assets/ro-medic-brochure-public.png", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features",
+      summary: "A team high school graduation project that researched and designed, on paper, a smart first-aid kit concept to guide untrained people through an emergency.",
+      description: "RO-MEDIC was our team's high school graduation project. We researched the problem and designed, on paper, a concept for a smart first-aid kit that would guide people without medical training through an emergency, step by step. It was never built as a working product.",
       skills: ["Research", "Concept design", "Teamwork"],
       sections: [
-        { title: "The problem", text: "In an emergency, a fast and correct decision can save a life. Yet most people hesitate to give first aid: they lack training, panic, or cannot find the right tool in time." },
-        { title: "The proposed kit", text: "RO-MEDIC was designed as a first-aid kit that acts as a step-by-step assistant for homes, schools, trips, and public places. The proposed features would work as one sequence: (1) a lid sensor switches the system on, lights the inside with LEDs, and starts voice guidance; (2) sensors read heart rate, temperature, and blood oxygen (SpO₂); (3) the kit's software uses those readings to suggest a likely condition, such as a fever or loss of consciousness; (4) the needed tool lights up while a small screen and speaker give visual and spoken instructions; (5) an emergency button sends the user's GPS location and readings to a saved contact through a phone app. The kit would also warn when supplies run low or medicines expire, and run on a rechargeable battery with optional solar charging.", shots: [
-          { image: "assets/ro-medic-brochure.jpg", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features", caption: "The team's project brochure. The product image is a concept visualization, not a built device." }
+        { title: "The problem", text: "In an emergency, a fast and correct decision can save a life. Yet many people hesitate to give first aid: they lack training, panic, or cannot find the right tool in time. Delays before medical help arrives make this worse, especially on highways and in remote areas." },
+        { title: "The proposed kit", text: "Our team designed RO-MEDIC as a first-aid kit that would act as a step-by-step assistant for homes, schools, trips, and public places. The proposed features would work as one sequence: (1) opening the lid wakes the system, lights the inside, and starts voice guidance; (2) sensors read heart rate, temperature, and blood oxygen (SpO₂); (3) the kit suggests a likely condition, such as a fever or loss of consciousness; (4) the right tool lights up while a small screen and speaker give instructions; (5) an emergency button sends the user's location and readings to a saved contact through a phone app. The kit would also warn about low supplies or expired medicines.", shots: [
+          { image: "assets/ro-medic-brochure-public.png", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features", caption: "The team's project brochure. The product image is a concept visualization, not a built device." }
         ] },
-        { title: "Research and design process", text: "The team studied the problem, specified the parts the kit would need (an Arduino or Raspberry Pi controller, vital-sign sensors, a display, a speaker, Bluetooth/Wi-Fi, and GPS), and mapped likely challenges with possible solutions: calibrating sensors for accuracy, a larger battery and solar charging for power use, and software engineers to help test the app. A short survey of 50 high school students found that 82% supported the idea of a smart first-aid assistant and 80% wanted one in their schools." },
-        { title: "Outcome", text: "RO-MEDIC stayed at the research and concept-design stage. No prototype was built or tested; the features described here were proposed only." }
+        { title: "Research", text: "The team's research report explored a broader version of the idea: a robotic paramedic that would travel to an incident with vital-sign sensors, a robotic arm, and a defibrillator. We treated this as conceptual exploration alongside the kit, not as a system that was built. The report reviews earlier studies and published sources, which are cited as in the original and were not independently verified. The team also ran a short survey of 50 high school students: 82% agreed with the idea of a smart robot assisting with first aid, and 80% wanted such a device in their schools or public places." },
+        { title: "Design process", text: "The team specified possible components (an Arduino or Raspberry Pi controller, sensors, a display, a speaker, wireless and GPS modules) and mapped likely challenges with possible solutions: sensor accuracy, power use, and software complexity." },
+        { title: "Outcome", text: "RO-MEDIC remained a team concept developed on paper. No prototype was built or tested, and no medical or AI functionality was implemented. All features above are proposals." }
       ],
-      gallery: [{ image: "assets/ro-medic-poster.jpg", alt: "RO-MEDIC promotional poster showing a stylized teal and red first-aid device", caption: "Promotional poster · Concept visualization." }],
-      report: "assets/ro-medic-report.pdf", reportLabel: "Read the Project Report · PDF",
-      links: []
+      gallery: [{ image: "assets/ro-medic-poster-public.png", alt: "RO-MEDIC promotional poster showing a stylized teal and red first-aid device", caption: "Promotional poster · Concept visualization." }],
+      links: [
+        { label: "Read the Research Report · PDF", url: "assets/ro-medic-research-public.pdf" },
+        { label: "View the Presentation · PDF", url: "assets/ro-medic-presentation-public.pdf" }
+      ]
     }
   ],
   archive: [
