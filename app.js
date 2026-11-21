@@ -20,6 +20,8 @@ function artwork(entry) {
     img.src = entry.image;
     img.alt = entry.alt || "";
     img.loading = "lazy";
+    if (entry.imageFit) img.style.objectFit = entry.imageFit;
+    if (entry.imageBg) art.style.background = entry.imageBg;
     art.append(img);
   } else {
     art.setAttribute("aria-hidden", "true");

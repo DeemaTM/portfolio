@@ -129,7 +129,7 @@ window.portfolio = {
     },
     {
       name: "RO-MEDIC — Smart First-Aid Kit Concept", category: "High School Graduation Project · Research & Concept Design",
-      image: "assets/ro-medic-brochure-public.png", alt: "RO-MEDIC trifold brochure in red and white describing the smart first-aid kit and its proposed features",
+      image: "assets/ro-medic-poster-public.png", imageFit: "contain", imageBg: "#f0d7af", alt: "RO-MEDIC promotional poster showing a stylized teal and red first-aid device (concept visualization)",
       summary: "A team high school graduation project that researched and designed, on paper, a smart first-aid kit concept to guide untrained people through an emergency.",
       description: "RO-MEDIC was our team's high school graduation project. We researched the problem and designed, on paper, a concept for a smart first-aid kit that would guide people without medical training through an emergency, step by step. It was never built as a working product.",
       skills: ["Research", "Concept design", "Teamwork"],
